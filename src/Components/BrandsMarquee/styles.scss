@@ -1,0 +1,27 @@
+@import "../../styles.scss";
+
+.brands-marquee {
+  padding: 0 5rem;
+  max-width: 1720px;
+  width: 100%;
+  @include flex-center;
+  overflow: hidden;
+
+  .brands {
+    padding: 48px 0;
+    width: 100%;
+    @include flex-center;
+    column-gap: 4rem;
+    overflow: hidden;
+
+    .brands-list {
+      width: auto;
+      @include flex-space-around;
+      column-gap: 4rem;
+      img {
+        height: 4rem;
+        object-fit: contain;
+      }
+    }
+  }
+}

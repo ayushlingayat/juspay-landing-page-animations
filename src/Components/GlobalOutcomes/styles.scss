@@ -1,0 +1,99 @@
+@import "../../styles.scss";
+
+.global-outcomes {
+  padding: 40px 20px;
+  height: 100vh;
+  @include flex-center-col;
+  background: url("../../Assets/global-outcomes-bg.svg") no-repeat center/cover;
+
+  .heading {
+    padding-top: 40px;
+    font-size: 94px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    @media screen and (max-width: 1084px) {
+      font-size: 88px;
+    }
+  }
+  .letters {
+    @include flex-justify-center;
+    $height: 100px;
+    height: $height;
+    line-height: $height;
+    letter-spacing: -0.04em;
+    overflow: hidden;
+    .letter-3, .letter-11 {
+      margin-left: -15px;
+    }
+    span {
+      font-size: 97px;
+      font-weight: 700;
+      line-height: $height;
+      background: radial-gradient(75.98% 130.43% at 18.04% 28.7%, #09f, #188edd 60.59%, #0561e2);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .description {
+    padding: 115px 3.5rem 0;
+    font-size: 19px;
+    font-weight: 300;
+    color: rgb(188 188 191);
+    text-align: center;
+    line-height: 1.6;
+    span {
+      font-weight: 600;
+      color: #fff;
+    }
+    &.description-sm {
+      padding-top: 60px;
+      display: none;
+      font-size: 14px;
+    }
+  }
+
+  .main-cta-btn {
+    margin-top: 64px;
+    padding: 1.25rem 1.75rem;
+    @include flex-center;
+    column-gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+    background-image: linear-gradient(105deg, #016fd0 4.61%, #03357c 162.29%) !important;
+    border-radius: 9999px;
+    .btn-text {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    &:hover {
+      background-image: linear-gradient(to right,#016fd0,#044aad,#03357c) !important;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .heading {
+      font-size: 40px;
+      font-weight: 400;
+    }
+    .letters {
+      height: 40px;
+      line-height: 48px;
+      .letter-3, .letter-11 {
+        margin-left: -6px;
+      }
+      span {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+    .description {
+      display: none;
+      &.description-sm {
+        display: block;
+      }
+    }
+  }
+}
